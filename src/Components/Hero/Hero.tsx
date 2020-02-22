@@ -21,13 +21,13 @@ const Hero: React.FC<{}> = () => {
           <Typography align="center" variant="h1" className={classes.title}>
             I AM SID PARMAR
           </Typography>
-          <Typography variant="body1" className={classes.info}>
+          <Typography align="justify" variant="body1" className={classes.info}>
             I am an <strong>App Dev Instructor </strong>
             at RED Academy, Vancouver. I graduated from
             <strong> North Island College </strong>
             with the
-            <strong>Web and Mobile Application Development Diploma </strong>
-            and I also have a <strong> Computer Science Degree </strong>.
+            <strong> Web and Mobile Application Development Diploma </strong>
+            and I also have a <strong>Computer Science Degree.</strong>
           </Typography>
           <Box className={classes.actionButtons}>
             <Button
