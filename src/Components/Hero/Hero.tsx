@@ -2,7 +2,8 @@ import React from "react";
 import ProfileImage from "../../images/Sid.jpg";
 import { Parallax } from "react-parallax";
 import { useStyles } from "./styles";
-import { Typography, Container, Button } from "@material-ui/core";
+import { Typography, Container, Button, Box } from "@material-ui/core";
+import { GitHub, LinkedIn } from "@material-ui/icons/";
 
 const Hero: React.FC<{}> = () => {
   const classes = useStyles();
@@ -14,7 +15,6 @@ const Hero: React.FC<{}> = () => {
         top: "10%"
       }}
       bgImage={ProfileImage}
-      blur={{ min: 0, max: 0.5 }}
     >
       <div className={classes.root}>
         <Container maxWidth="md" className={classes.insideStyles}>
@@ -29,14 +29,26 @@ const Hero: React.FC<{}> = () => {
             <strong>Web and Mobile Application Development Diploma </strong>
             and I also have a <strong> Computer Science Degree </strong>.
           </Typography>
-          <Button
-            size="large"
-            href="https://github.com/siddharthparmar7"
-            variant="contained"
-            color="secondary"
-          >
-            GITHUB
-          </Button>
+          <Box className={classes.actionButtons}>
+            <Button
+              className={classes.button}
+              size="large"
+              href="https://github.com/siddharthparmar7"
+              variant="contained"
+              color="secondary"
+            >
+              <GitHub /> Projects
+            </Button>
+            <Button
+              className={classes.button}
+              color="secondary"
+              size="large"
+              href="https://www.linkedin.com/in/siddharth-parmar-a901a075/"
+              variant="contained"
+            >
+              <LinkedIn /> LinkedIn
+            </Button>
+          </Box>
         </Container>
       </div>
     </Parallax>

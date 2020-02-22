@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles(theme => ({
   root: {
     height: "550px",
-
     opacity: 0.6,
     display: "flex",
     flex: 1,
@@ -26,5 +25,15 @@ export const useStyles = makeStyles(theme => ({
     fontSize: "1.2em",
     color: "white",
     opacity: 0.9
+  },
+  actionButtons: {
+    margin: 30,
+    display: "flex",
+    flex: 1,
+    alignSelf: "center",
+    justifyContent: "center"
+  },
+  button: {
+    margin: 20
   }
 }));
