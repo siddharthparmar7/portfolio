@@ -18,7 +18,7 @@ export const useStyles = makeStyles(theme => ({
     color: "white",
     textTransform: "uppercase",
     fontSize: "5em",
-    fontWeight: 900
+    fontWeight: 700
   },
   info: {
     fontWeight: 400,
