@@ -8,17 +8,21 @@ export const useStyles = makeStyles(theme => ({
     padding: 50
   },
   grid: {
-    flexGrow: 1,
     marginTop: 20
   },
+  gridContainer: {
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "space-between"
+    }
+  },
   projects: {
-    display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
+    flexBasis: "30%",
+    textAlign: "center"
   },
   logos: {
     height: "auto",
-    width: "40%"
+    width: "20%"
   }
 }));
