@@ -24,5 +24,8 @@ export const useStyles = makeStyles(theme => ({
   logos: {
     height: "auto",
     width: "20%"
+  },
+  details: {
+    marginTop: 20
   }
 }));
