@@ -11,10 +11,10 @@ const Hero: React.FC<{}> = () => {
     <Parallax
       bgImageAlt="Sid Parmar"
       strength={300}
+      bgImage={ProfileImage}
       bgImageStyle={{
         top: "10%"
       }}
-      bgImage={ProfileImage}
     >
       <div className={classes.root}>
         <Container maxWidth="md" className={classes.insideStyles}>

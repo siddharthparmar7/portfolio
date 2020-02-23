@@ -1,5 +1,5 @@
 import React from "react";
-import projectsbg from "../../images/projects.jpg";
+import projectsbg from "../../images/projects2.jpg";
 import { Parallax } from "react-parallax";
 import { useStyles } from "./styles";
 import { Container, Typography, Box, Grid } from "@material-ui/core";
@@ -16,6 +16,9 @@ const Projects: React.FC<{}> = () => {
       bgImageAlt="Projects"
       className={classes.root}
       bgImage={projectsbg}
+      bgImageStyle={{
+        opacity: 0.3
+      }}
     >
       <Container className={classes.container}>
         <Grid container className={classes.grid} spacing={8}>
@@ -56,6 +59,9 @@ const Projects: React.FC<{}> = () => {
                 <Box className={classes.details}>
                   <Typography variant="body1">
                     Managed more than 10 React Native projects.
+                  </Typography>
+                  <Typography variant="body1">
+                    Wrote Medium blogs on emering tech
                   </Typography>
                   <Typography variant="body1">
                     Actively managing and maintaining team projects.

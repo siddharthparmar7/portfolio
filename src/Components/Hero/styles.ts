@@ -3,13 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles(theme => ({
   root: {
     height: "550px",
-    opacity: 0.6,
+    // opacity: 0.6,
     display: "flex",
     flex: 1,
     alignItems: "center",
     justifyContent: "space-around",
     flexDirection: "column",
-    background: "linear-gradient(to right bottom, #000, #000)"
+    background:
+      "linear-gradient(to right bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3))"
   },
   insideStyles: {
     // maxWidth: "80%"

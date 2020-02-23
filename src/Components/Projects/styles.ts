@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(theme => ({
   root: {
-    opacity: 0.6
+    // opacity: 0.9
   },
   container: {
     padding: 50
