@@ -1,5 +1,5 @@
 import React from "react";
-import projectsbg from "../../images/projects2.jpg";
+import projectsbg from "../../images/projects.jpg";
 import { Parallax } from "react-parallax";
 import { useStyles } from "./styles";
 import { Container, Typography, Box, Grid } from "@material-ui/core";
