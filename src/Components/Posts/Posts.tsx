@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Grid, Paper, Container, Typography } from "@material-ui/core/";
+import { Grid, Container, Typography } from "@material-ui/core/";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,7 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import { useStyles } from "./styles";
 
-interface iPost {
+type PostState = {
   title: string;
   pubDate: string;
   link: string;
@@ -20,15 +20,13 @@ interface iPost {
   description: string;
   content: string;
   categories: [string];
-}
+};
 
 const API_URL =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@siddharthparmar7";
 
-const HTMLParser = new DOMParser();
-
 const Posts: React.FC<{}> = () => {
-  const [posts, setPosts] = React.useState<iPost[] | null>();
+  const [posts, setPosts] = React.useState<PostState[] | null>();
   const classes = useStyles();
 
   const getPosts = async () => {
