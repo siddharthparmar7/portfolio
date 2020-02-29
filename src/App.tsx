@@ -3,13 +3,13 @@ import { ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import Loader from "./Components/Loader";
 
-const Home = lazy(() => import("./Pages/Home"));
+const AppRoutes = lazy(() => import("./AppRoutes/index"));
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Suspense fallback={<Loader />}>
-        <Home />
+        <AppRoutes />
       </Suspense>
     </ThemeProvider>
   );
