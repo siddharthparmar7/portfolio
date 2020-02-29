@@ -11,27 +11,44 @@ export const useStyles = makeStyles(theme => ({
     background:
       "linear-gradient(to right bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3))"
   },
-  insideStyles: {},
   title: {
     color: "white",
     textTransform: "uppercase",
-    fontSize: "5em",
-    fontWeight: 700
+    fontSize: "3.5em",
+    fontWeight: 700,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "5em",
+      fontWeight: 700
+    }
   },
   info: {
     fontWeight: 400,
     fontSize: "1.2em",
     color: "white",
-    opacity: 0.9
+    opacity: 0.9,
+    marginTop: 20
   },
   actionButtons: {
     margin: 30,
     display: "flex",
-    flex: 1,
-    alignSelf: "center",
-    justifyContent: "center"
+    flexDirection: "column",
+    placeItems: "center",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
+      alignSelf: "center",
+      justifyContent: "center"
+    }
+  },
+  icons: {
+    marginRight: 5
   },
   button: {
-    margin: 20
+    margin: 10,
+    justifyContent: "flex-start",
+    width: "50%",
+    [theme.breakpoints.up("sm")]: {
+      width: "auto",
+      alignItems: "center"
+    }
   }
 }));

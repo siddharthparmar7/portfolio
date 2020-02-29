@@ -17,7 +17,7 @@ const Hero: React.FC<{}> = () => {
       }}
     >
       <div className={classes.root}>
-        <Container maxWidth="md" className={classes.insideStyles}>
+        <Container maxWidth="md">
           <Typography align="center" variant="h1" className={classes.title}>
             I AM SID PARMAR
           </Typography>
@@ -37,7 +37,8 @@ const Hero: React.FC<{}> = () => {
               variant="contained"
               color="secondary"
             >
-              <GitHub /> Projects
+              <GitHub className={classes.icons} />{" "}
+              <Typography variant="body1">Projects</Typography>
             </Button>
             <Button
               className={classes.button}
@@ -46,7 +47,8 @@ const Hero: React.FC<{}> = () => {
               href="https://www.linkedin.com/in/siddharth-parmar-a901a075/"
               variant="contained"
             >
-              <LinkedIn /> LinkedIn
+              <LinkedIn className={classes.icons} />{" "}
+              <Typography variant="body1">LinkedIn</Typography>
             </Button>
           </Box>
         </Container>
