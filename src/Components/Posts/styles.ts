@@ -8,7 +8,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1
     },
-    card: { height: 350 },
+    card: {
+      height: 380
+    },
     image: {
       height: 140
     },
@@ -18,6 +20,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: "8px auto 20px",
       display: "block",
       backgroundColor: "#ff3366"
+    },
+    content: {
+      height: 150,
+      overflow: "hidden"
     }
   })
 );

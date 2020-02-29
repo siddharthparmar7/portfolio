@@ -19,7 +19,11 @@ export const useStyles = makeStyles(theme => ({
   projects: {
     flexDirection: "column",
     flexBasis: "30%",
-    textAlign: "center"
+    textAlign: "center",
+    paddingTop: "10%",
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: 0
+    }
   },
   logos: {
     height: "auto",

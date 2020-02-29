@@ -25,6 +25,8 @@ interface iPost {
 const API_URL =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@siddharthparmar7";
 
+const HTMLParser = new DOMParser();
+
 const Posts: React.FC<{}> = () => {
   const [posts, setPosts] = React.useState<iPost[] | null>();
   const classes = useStyles();
@@ -61,30 +63,39 @@ const Posts: React.FC<{}> = () => {
             <Grid
               key={post?.pubDate}
               item
-              xs={index === 0 ? 8 : index === 1 ? 4 : index === 4 ? 6 : 3}
+              sm={index === 0 ? 8 : index === 1 ? 4 : 6}
             >
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea href={post.link}>
                   <CardMedia
                     className={classes.image}
                     image={post.thumbnail}
                     title="blog picture"
                   />
-                  <CardContent>
+                  <CardContent className={classes.content}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {post?.title}
                     </Typography>
-                    {/* <Typography
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="h6"
+                    >
+                      {post?.pubDate}
+                    </Typography>
+                    <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      {post?.description}
-                    </Typography> */}
+                      {post.description
+                        .replace(/<\/?[^>]+(>|$)/g, "")
+                        .slice(1, 200) + "..."}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button href={post.link} size="small" color="primary">
                     Learn More
                   </Button>
                 </CardActions>
