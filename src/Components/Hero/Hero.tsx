@@ -10,13 +10,13 @@ const Hero: React.FC<{}> = () => {
   return (
     <Parallax
       bgImageAlt="Sid Parmar"
-      strength={300}
+      strength={200}
       bgImage={ProfileImage}
       bgImageStyle={{
         top: "10%"
       }}
     >
-      <div className={classes.root}>
+      <Container maxWidth="xl" className={classes.root}>
         <Container maxWidth="md">
           <Typography align="center" variant="h1" className={classes.title}>
             I AM SID PARMAR
@@ -29,30 +29,30 @@ const Hero: React.FC<{}> = () => {
             <strong> Web and Mobile Application Development Diploma </strong>
             and I also have a <strong>Computer Science Degree.</strong>
           </Typography>
-          <Box className={classes.actionButtons}>
-            <Button
-              className={classes.button}
-              size="large"
-              href="https://github.com/siddharthparmar7"
-              variant="contained"
-              color="secondary"
-            >
-              <GitHub className={classes.icons} />{" "}
-              <Typography variant="body1">Projects</Typography>
-            </Button>
-            <Button
-              className={classes.button}
-              color="secondary"
-              size="large"
-              href="https://www.linkedin.com/in/siddharth-parmar-a901a075/"
-              variant="contained"
-            >
-              <LinkedIn className={classes.icons} />{" "}
-              <Typography variant="body1">LinkedIn</Typography>
-            </Button>
-          </Box>
         </Container>
-      </div>
+        <Box className={classes.actionButtons}>
+          <Button
+            className={classes.button}
+            size="large"
+            href="https://github.com/siddharthparmar7"
+            variant="contained"
+            color="secondary"
+          >
+            <GitHub className={classes.icons} />{" "}
+            <Typography variant="body1">Projects</Typography>
+          </Button>
+          <Button
+            className={classes.button}
+            color="secondary"
+            size="large"
+            href="https://www.linkedin.com/in/siddharth-parmar-a901a075/"
+            variant="contained"
+          >
+            <LinkedIn className={classes.icons} />{" "}
+            <Typography variant="body1">LinkedIn</Typography>
+          </Button>
+        </Box>
+      </Container>
     </Parallax>
   );
 };
